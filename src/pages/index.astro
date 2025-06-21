@@ -1,27 +1,46 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import HeroKeyLogo from '@/assets/hero-key-logo.webp';
-import HeroKeyBackground from '@/assets/hero-key-background.webp';
+import Layout from "@/layouts/Layout.astro";
+import HeroKeyLogo from "@/assets/hero-key-logo.webp";
+import HeroKeyBackground from "@/assets/hero-key-background.webp";
+import LogoVIIcon from "@/assets/logo-vi.svg";
+import PlayButtonIcon from "@/assets/play-button.svg";
 ---
 
 <Layout>
-    <section>
-        <picture id="hero-key"
-        class="h-screen scale-125 block overflow-hidden fixed">
-            <img 
-            id="hero-key-logo"
-            src={HeroKeyLogo.src}
-            alt="GTA VI Logo" 
-            class="w-full h-full object-cover absolute"
-            loading="lazy"
-            />
-            <img 
-            id="hero-key-background"
-            src={HeroKeyBackground.src}
-            alt="GTA VI Background" 
-            class="w-full h-full object-cover"
-            loading="lazy"
-            />
-        </picture>
-    </section>
+  <section>
+    <picture
+      id="hero-key"
+      class="h-screen scale-125 block overflow-hidden fixed"
+    >
+      <img
+        id="hero-key-logo"
+        src={HeroKeyLogo.src}
+        alt="GTA VI Logo"
+        class="w-full h-full object-cover absolute"
+        loading="lazy"
+      />
+      <img
+        id="hero-key-background"
+        src={HeroKeyBackground.src}
+        alt="GTA VI Background"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </picture>
+  </section>
+
+  <div
+    class="h-screen w-full fixed flex flex-col items-center justify-between p-14"
+  >
+    <header class="w-full flex justify-between">
+      <LogoVIIcon class="size-9 text-white" />
+    </header>
+
+    <button class="cursor-pointer absolute inset-0 m-auto inline-block">
+      <PlayButtonIcon
+        id="hero-play-button"
+        class="size-26 m-auto mt-10 backdrop-blur-3xl rounded-full hover:scale-110 transition-transform duration-500"
+      />
+    </button>
+  </div>
 </Layout>
