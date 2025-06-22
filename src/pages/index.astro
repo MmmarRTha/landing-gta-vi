@@ -2,8 +2,9 @@
 import Layout from "@/layouts/Layout.astro";
 import HeroKeyLogo from "@/assets/hero-key-logo.webp";
 import HeroKeyBackground from "@/assets/hero-key-background.webp";
-import LogoVIIcon from "@/assets/logo-vi.svg";
+import LogoVI from "@/assets/logo-vi.svg";
 import PlayButtonIcon from "@/assets/play-button.svg";
+import CutLogoVI from "@/assets/cut-logo-vi.svg";
 ---
 
 <Layout>
@@ -33,7 +34,7 @@ import PlayButtonIcon from "@/assets/play-button.svg";
     class="h-screen w-full fixed flex flex-col items-center justify-between p-14"
   >
     <header class="w-full flex justify-between">
-      <LogoVIIcon class="size-9 text-white" />
+      <LogoVI class="size-9 text-white" />
     </header>
 
     <button class="cursor-pointer absolute inset-0 m-auto inline-block">
@@ -42,5 +43,14 @@ import PlayButtonIcon from "@/assets/play-button.svg";
         class="size-26 m-auto mt-10 backdrop-blur-3xl rounded-full hover:scale-110 transition-transform duration-500"
       />
     </button>
+
+    <footer id="hero-footer" class="absolute bottom-8 m-auto">
+      <CutLogoVI
+        class="text-white w-36 drop-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000]"
+      />
+      <span class="absolute uppercase tracking-[6px] whitespace-nowrap text-center top-[50px] font-medium text-shadow-[0_0_2px_rgba(255,255,255,.5),0_0_8px_#000] left-1/2 -translate-x-1/2">
+        watch trailer 2
+      </span>
+    </footer>
   </div>
 </Layout>
