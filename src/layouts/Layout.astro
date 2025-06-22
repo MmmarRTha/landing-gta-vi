@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
----
+import KeppScrolling from "@/assets/keep-scrolling.svg"
+--- 
 <!doctype html>
 <html lang="en">
 	<head>
@@ -12,6 +13,7 @@ import "@/styles/global.css";
 	</head>
 	<body>
 		<slot />
+        <KeppScrolling class="fixed bottom-3 left-0 right-0 m-auto text-pink-300 drop-shadow-2xl animate-bounce-pulse" />
 	</body>
 </html>
 
